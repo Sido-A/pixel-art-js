@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cacaca;
+  overflow: hidden;
+}
+
+td {
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+.pink {
+  background-color: pink;
+  color: white;
+}
+.black {
+  background-color: black;
+  color: white;
+}
+.white {
+  background-color: white;
+  color: black;
+}
+.blue {
+  background-color: blue;
+  color: white;
+}
+.green {
+  background-color: green;
+  color: white;
+}
+.yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.gray {
+  background-color: gray;
+  color: white;
+}
+
+.clear-all {
+  background-color: white;
+  color: gray;
+}
+
+.pixel-colors td:hover {
+  opacity: 0.5;
+}
+
+.pixel-wrapper {
+  position: relative;
+  height: 800px;
+}
+
+.pixel-colors {
+  margin: 2em;
+}
+
+.pixel-colors p {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+
+.pixel-colors td {
+  font-weight: bold;
+  border: 3px solid #000;
+  padding: 0;
+  text-align: center;
+  width: 10%;
+  height: 35px;
+}
+
+.canvas-wrapper p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.canvas-inner {
+  border: 3px solid #000;
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.canvas-inner table {
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.canvas-inner td {
+  border: 1.9px solid #000;
+  padding: 0;
+  margin: 0;
+  width: 50px;
+  height: 35px;
+}
+
+@media screen and (max-width: 470px) {
+  .pixel-colors {
+    margin: 3em 0;
+    overflow: hidden;
+  }
+
+  .pixel-colors p {
+    text-align: center;
+  }
+
+  .pixel-colors tr {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+  }
+
+  .pixel-colors td {
+    width: 48%;
+    height: 35px;
+    margin: 0.3em auto;
+    padding-top: 0.5em;
+  }
+
+  .canvas-inner {
+    border: 3px solid #000;
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
