@@ -5,7 +5,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #cacaca;
-  overflow: hidden;
 }
 
 td {
@@ -112,6 +111,13 @@ td {
 }
 
 @media screen and (max-width: 470px) {
+
+  .pixel-wrapper {
+  position: relative;
+  height: auto;
+  overflow-y: scroll;
+}
+
   .pixel-colors {
     margin: 3em 0;
     overflow: hidden;
@@ -139,7 +145,7 @@ td {
     width: 300px;
     height: auto;
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%);
   }
