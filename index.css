@@ -4,7 +4,6 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #cacaca;
 }
 
 td {
@@ -39,12 +38,10 @@ td {
   background-color: yellow;
   color: black;
 }
-
 .gray {
   background-color: gray;
   color: white;
 }
-
 .clear-all {
   background-color: white;
   color: gray;
@@ -56,7 +53,13 @@ td {
 
 .pixel-wrapper {
   position: relative;
+  background-color: #cacaca;
   height: 100vh;
+}
+
+.scroll {
+  height: 100%;
+  overflow: scroll;
 }
 
 .pixel-colors {
@@ -79,6 +82,11 @@ td {
   height: 35px;
 }
 
+.canvas-wrapper {
+  height: 100%;
+  position: relative;
+}
+
 .canvas-wrapper p {
   text-align: center;
   font-size: 2rem;
@@ -88,6 +96,10 @@ td {
 }
 
 .canvas-inner {
+  height: 100%;
+}
+
+.canvas-table {
   border: 3px solid #000;
   width: 300px;
   height: auto;
@@ -97,12 +109,12 @@ td {
   transform: translate(-50%, -40%);
 }
 
-.canvas-inner table {
+.canvas-table table {
   border-collapse: collapse;
   background-color: #fff;
 }
 
-.canvas-inner td {
+.canvas-table td {
   border: 1.9px solid #000;
   padding: 0;
   margin: 0;
@@ -110,18 +122,43 @@ td {
   height: 35px;
 }
 
-@media screen and (max-width: 470px) {
-
-  .pixel-wrapper {
-  position: relative;
-  /* height: auto; */
-  overflow-y: scroll;
-  margin-bottom: 3em;
-}
-
+@media screen and (max-width: 780px) {
   .pixel-colors {
     margin: 3em 0;
-    overflow: hidden;
+  }
+
+  .pixel-colors p {
+    text-align: center;
+  }
+
+  .pixel-colors tr {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-weight: bold;
+  }
+
+  .pixel-colors td {
+    width: 30%;
+    height: 35px;
+    margin: 0.3em auto;
+    padding: 1.5em;
+  }
+
+  .canvas-table {
+    border: 3px solid #000;
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .pixel-colors {
+    margin: 3em 0;
   }
 
   .pixel-colors p {
@@ -141,10 +178,9 @@ td {
     padding-top: 0.5em;
   }
 
-  .canvas-inner {
+  .canvas-table {
     border: 3px solid #000;
     width: 300px;
-    height: auto;
     position: absolute;
     top: 80%;
     left: 50%;
